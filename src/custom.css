@@ -1,0 +1,73 @@
+.fondo-color-principal{
+  background-color: #a51884;
+}
+
+.color-principal{
+  color: #a51884;
+}
+
+.footer-inferior {
+  bottom: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
+
+/* Estilos para Categoria-Scroll */
+.category-scroll-outer {
+  overflow-x: auto;
+  padding: 10px 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.category-scroll-outer::-webkit-scrollbar {
+  display: none;
+}
+
+/* Contenedor interior centrado */
+.category-scroll-inner {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5em;
+  padding: 0 2em;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 16px;
+  min-width: 100%;
+  justify-content: center;
+}
+
+.category-item {
+  flex: 0 0 auto;
+  text-align: center;
+  scroll-snap-align: center;
+  width: 60px;
+}
+
+.category-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.category-label {
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+@media (min-width: 1200px) {
+  .category-scroll-outer {
+    overflow: visible;
+  }
+
+  .category-scroll-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: unset;
+  }
+
+  .category-item {
+    width: 100px;
+  }
+
+}
