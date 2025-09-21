@@ -11,12 +11,13 @@ import PerfilA from "../pages/admin/perfilA";
 const AppRoutes = () => {
   return (
     <Routes>
-      {/* Rutas con layout común (Header/Footer) */}
+      {/* Rutas: layout PageWeb */}
       <Route path="/" element={<LayoutPage />}>
         <Route index element={<Inicio />} />
         <Route path="fq" element={<Fq />} />
         <Route path="contacto" element={<Contacto />} />
       </Route>
+      {/* Rutas: layout Plataforma Admin */}
       <Route path="/adminPage" element={<LayoutAdmin />}>
         <Route index element={<Dashboard />} />
         <Route path="GestionProducto" element={<GestionProductos />} />
