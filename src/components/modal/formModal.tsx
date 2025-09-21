@@ -14,7 +14,7 @@ const FormModal: React.FC<FormModalProps> = ({ show, onClose, children }) => {
       <div
         className="modal-backdrop fade show"
         onClick={onClose}
-        style={{ zIndex: 1040 }}
+        style={{ zIndex: 1050 }}
       />
       <div
         className="modal fade show d-block"

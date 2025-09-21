@@ -23,14 +23,15 @@ const AppRoutes = () => {
         <Route index element={<Inicio />} />
         <Route path="fq" element={<Fq />} />
         <Route path="contacto" element={<Contacto />} />
-        {/* Rutas: layout Plataforma Admin */}
+        
+        {/* Rutas: layout Plataforma Cliente */}
         <Route path="/carrito" element={<LayoutCliente />}>
- 
           <Route index element={<PerfilC />} />
-         <Route path="direccion" element={<DireccionC />} />
+          <Route path="direccion" element={<DireccionC />} />
           <Route path="pedido" element={<PedidosC />} />
           <Route path="gestor" element={<CambioC />} />
         </Route>
+
       </Route>
       {/* Rutas: layout Plataforma Admin */}
       <Route path="/adminPage" element={<LayoutAdmin />}>
