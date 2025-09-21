@@ -16,6 +16,10 @@
   cursor: pointer;
 }
 
+.nav-link.active {
+  border-left: 4px solid #a51884;
+}
+
 
 /* Estilos para Categoria-Scroll */
 .category-scroll-outer {

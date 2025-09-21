@@ -1,12 +1,19 @@
 import { Routes, Route } from "react-router-dom";
 import LayoutPage from "../layout/layoutPage";
+import LayoutAdmin from "../layout/layoutAdmin";
+import LayoutCliente from "../layout/layoutCliente";
+
 import Inicio from "../pages/inicio";
 import Contacto from "../pages/contacto";
 import Fq from "../pages/fq";
-import LayoutAdmin from "../layout/layoutAdmin";
+
 import Dashboard from "../pages/admin/dashboard";
 import GestionProductos from "../pages/admin/gestionProducto";
 import PerfilA from "../pages/admin/perfilA";
+import PerfilC from "../pages/cliente/perfilC";
+import DireccionC from "../pages/cliente/direccionC";
+import PedidosC from "../pages/cliente/pedidosC";
+import CambioC from "../pages/cliente/CambioC";
 
 const AppRoutes = () => {
   return (
@@ -16,6 +23,14 @@ const AppRoutes = () => {
         <Route index element={<Inicio />} />
         <Route path="fq" element={<Fq />} />
         <Route path="contacto" element={<Contacto />} />
+        {/* Rutas: layout Plataforma Admin */}
+        <Route path="/carrito" element={<LayoutCliente />}>
+ 
+          <Route index element={<PerfilC />} />
+         <Route path="direccion" element={<DireccionC />} />
+          <Route path="pedido" element={<PedidosC />} />
+          <Route path="gestor" element={<CambioC />} />
+        </Route>
       </Route>
       {/* Rutas: layout Plataforma Admin */}
       <Route path="/adminPage" element={<LayoutAdmin />}>
