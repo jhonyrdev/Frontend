@@ -25,7 +25,7 @@ const AppRoutes = () => {
         <Route path="contacto" element={<Contacto />} />
         
         {/* Rutas: layout Plataforma Cliente */}
-        <Route path="/carrito" element={<LayoutCliente />}>
+        <Route path="/cuenta" element={<LayoutCliente />}>
           <Route index element={<PerfilC />} />
           <Route path="direccion" element={<DireccionC />} />
           <Route path="pedido" element={<PedidosC />} />

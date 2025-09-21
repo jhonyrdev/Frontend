@@ -1,40 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-type FormType = 'login' | 'register';
+type FormType = "login" | "register";
 
 interface AuthFormProps {
   onClose: () => void;
 }
 
 const AuthForm: React.FC<AuthFormProps> = ({ onClose }) => {
-  const [formType, setFormType] = useState<FormType>('login');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [formType, setFormType] = useState<FormType>("login");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
 
   const toggleFormType = () => {
-    setFormType(prev => (prev === 'login' ? 'register' : 'login'));
-    setEmail('');
-    setPassword('');
-    setConfirmPassword('');
+    setFormType((prev) => (prev === "login" ? "register" : "login"));
+    setEmail("");
+    setPassword("");
+    setConfirmPassword("");
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (formType === 'register' && password !== confirmPassword) {
-      alert('Las contraseñas no coinciden');
+    if (formType === "register" && password !== confirmPassword) {
+      alert("Las contraseñas no coinciden");
       return;
     }
-
-    alert(`${formType === 'login' ? 'Login' : 'Registro'} con email: ${email}`);
     onClose();
+    if (formType === "login") {
+      navigate("/cuenta");
+    }
   };
 
   return (
     <>
-      <div className="modal-header">
-        <h5 className="modal-title">{formType === 'login' ? 'Login' : 'Registro'}</h5>
+      <div className="modal-header border-0">
+        <h5 className="modal-title">
+          {formType === "login" ? "Login" : "Registro"}
+        </h5>
         <button
           type="button"
           className="btn-close"
@@ -53,7 +58,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onClose }) => {
               className="form-control"
               id="emailInput"
               value={email}
-              onChange={e => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
@@ -66,11 +71,11 @@ const AuthForm: React.FC<AuthFormProps> = ({ onClose }) => {
               className="form-control"
               id="passwordInput"
               value={password}
-              onChange={e => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
-          {formType === 'register' && (
+          {formType === "register" && (
             <div className="mb-3">
               <label htmlFor="confirmPasswordInput" className="form-label">
                 Confirmar Contraseña
@@ -80,22 +85,22 @@ const AuthForm: React.FC<AuthFormProps> = ({ onClose }) => {
                 className="form-control"
                 id="confirmPasswordInput"
                 value={confirmPassword}
-                onChange={e => setConfirmPassword(e.target.value)}
+                onChange={(e) => setConfirmPassword(e.target.value)}
                 required
               />
             </div>
           )}
         </div>
-        <div className="modal-footer">
+        <div className="modal-footer border-0">
           <button type="submit" className="btn btn-primary">
-            {formType === 'login' ? 'Ingresar' : 'Registrarse'}
+            {formType === "login" ? "Ingresar" : "Registrarse"}
           </button>
           <button
             type="button"
             className="btn btn-link"
             onClick={toggleFormType}
           >
-            {formType === 'login' ? 'Crear cuenta' : 'Ya tengo cuenta'}
+            {formType === "login" ? "Crear cuenta" : "Ya tengo cuenta"}
           </button>
         </div>
       </form>

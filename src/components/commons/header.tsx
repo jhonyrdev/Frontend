@@ -50,9 +50,9 @@ const Header: React.FC<HeaderProps> = ({ onAuthIconClick }) => {
             ></span>
 
             {/* Shopping bag*/}
-            <Link to="carrito" className="color-principal clickable fs-6 me-3">
+            <span className="color-principal clickable fs-6 me-3">
               <i className="fa-solid fa-bag-shopping"></i>
-            </Link>
+            </span>
 
             {/* Botón hamburguesa */}
             <button
