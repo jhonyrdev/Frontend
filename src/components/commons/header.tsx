@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ onAuthIconClick }) => {
 
           <div className="d-flex align-items-center">
             {/* Search */}
-            <span className="color-principal fs-6 me-3 d-none d-lg-block">
+            <span className="color-principal clickable fs-6 me-3 d-none d-lg-block">
               <i className="fa-solid fa-magnifying-glass"></i>
             </span>
 
@@ -40,9 +40,9 @@ const Header: React.FC<HeaderProps> = ({ onAuthIconClick }) => {
             </Link>
 
             {/* User*/}
-            <Link to="/" className="color-principal fs-6 me-3 d-none d-md-block">
+            <span className="color-principal clickable fs-6 me-3 d-none d-md-block">
               <i className="fa-regular fa-circle-user" onClick={onAuthIconClick}></i>
-            </Link>
+            </span>
 
             <span
               className="border-end me-3 d-none d-lg-block"
@@ -50,7 +50,7 @@ const Header: React.FC<HeaderProps> = ({ onAuthIconClick }) => {
             ></span>
 
             {/* Shopping bag*/}
-            <span className="color-principal fs-6 me-3">
+            <span className="color-principal clickable fs-6 me-3">
               <i className="fa-solid fa-bag-shopping"></i>
             </span>
 
@@ -95,9 +95,9 @@ const Header: React.FC<HeaderProps> = ({ onAuthIconClick }) => {
               </a>
             </li>
             <li className="mb-3">
-              <a href="#" className="color-principal fs-6 d-flex align-items-center text-decoration-none">
-                <i className="fa-regular fa-circle-user me-2"></i> Mi Cuenta
-              </a>
+              <span className="color-principal clickable fs-6 d-flex align-items-center text-decoration-none" onClick={onAuthIconClick}>
+                <i className="fa-regular fa-circle-user me-2"></i>Mi Cuenta
+              </span>
             </li>
           </ul>
         </div>
