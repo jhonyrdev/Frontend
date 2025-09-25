@@ -19,7 +19,7 @@ const LateralMenu: React.FC<Props> = ({ onSelect }) => {
       <ul className="nav flex-column mt-4">
         <li className="nav-item">
           <NavLink
-            to="/carrito"
+            to="/cuenta"
             end
             className="nav-link btn btn-link text-start text-black w-100"
             onClick={onSelect}
@@ -29,7 +29,7 @@ const LateralMenu: React.FC<Props> = ({ onSelect }) => {
         </li>
         <li className="nav-item">
           <NavLink
-            to="/carrito/direccion"
+            to="/cuenta/direccion"
             className="nav-link btn btn-link text-start text-black w-100"
             onClick={onSelect}
           >
@@ -38,7 +38,7 @@ const LateralMenu: React.FC<Props> = ({ onSelect }) => {
         </li>
         <li className="nav-item">
           <NavLink
-            to="/carrito/pedido"
+            to="/cuenta/pedido"
             className="nav-link btn btn-link text-start text-black w-100"
             onClick={onSelect}
           >
@@ -47,7 +47,7 @@ const LateralMenu: React.FC<Props> = ({ onSelect }) => {
         </li>
         <li className="nav-item">
           <NavLink
-            to="/carrito/gestor"
+            to="/cuenta/gestor"
             className="nav-link btn btn-link text-start text-black w-100"
             onClick={onSelect}
           >
