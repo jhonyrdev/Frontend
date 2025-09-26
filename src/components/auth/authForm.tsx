@@ -46,12 +46,18 @@ const handleSubmit = async (e: React.FormEvent) => {
     }
 
     onClose();
-  } catch (error) {
-    alert(
-      formType === "login"
-        ? "Credenciales incorrectas"
-        : "Ocurrió un error en el registro"
-    );
+  } catch (error: any) {
+    if (formType === "login") {
+      if (error.status === 403) {
+        alert("Usuario no permitido");
+      } else if (error.status === 401) {
+        alert("Credenciales incorrectas");
+      } else {
+        alert("Error inesperado");
+      }
+    } else {
+      alert("Ocurrió un error en el registro");
+    }
   }
 };
 
