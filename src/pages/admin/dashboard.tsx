@@ -59,12 +59,6 @@ const Dashboard = () => {
                 <Card.Title>
                   <i className="fas fa-chart-bar me-2"></i>Ventas por día
                 </Card.Title>
-                {/* cambiar por gráfico real */}
-                <img
-                  src="https://via.placeholder.com/700x300?text=Grafico+de+Ventas"
-                  alt="Gráfico de ventas"
-                  className="img-fluid"
-                />
                 <p className="text-muted mt-2">
                   // cambiar a Chart.js o Recharts
                 </p>
