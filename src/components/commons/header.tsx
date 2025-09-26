@@ -34,11 +34,6 @@ const Header: React.FC<HeaderProps> = ({ onAuthIconClick }) => {
               <i className="fa-solid fa-magnifying-glass"></i>
             </span>
 
-            {/* Admin - Hidden*/}
-            <Link to="/adminPage" className="color-principal fs-6 me-3 d-none d-md-block">
-              <i className="fa-solid fa-wrench"></i>
-            </Link>
-
             {/* User*/}
             <span className="color-principal clickable fs-6 me-3 d-none d-md-block">
               <i className="fa-regular fa-circle-user" onClick={onAuthIconClick}></i>

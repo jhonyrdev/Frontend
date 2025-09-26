@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { registrarUsuario } from "../../utils/registro.util";
+import { loginUsuario } from "../../utils/login.util";
 
 type FormType = "login" | "register";
 
@@ -21,18 +23,37 @@ const AuthForm: React.FC<AuthFormProps> = ({ onClose }) => {
     setConfirmPassword("");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-    if (formType === "register" && password !== confirmPassword) {
-      alert("Las contraseñas no coinciden");
-      return;
+  if (formType === "register" && password !== confirmPassword) {
+    alert("Las contraseñas no coinciden");
+    return;
+  }
+
+  try {
+    if (formType === "register") {
+      const data = await registrarUsuario(email, password);
+      console.log("Usuario registrado:", data);
+      alert("Registro exitoso");
     }
-    onClose();
+
     if (formType === "login") {
+      const user = await loginUsuario(email, password);
+      console.log("Usuario logueado:", user);
+      alert(`Bienvenido, ${user.nombre}`);
       navigate("/cuenta");
     }
-  };
+
+    onClose();
+  } catch (error) {
+    alert(
+      formType === "login"
+        ? "Credenciales incorrectas"
+        : "Ocurrió un error en el registro"
+    );
+  }
+};
 
   return (
     <>

@@ -15,6 +15,8 @@ import DireccionC from "../pages/cliente/direccionC";
 import PedidosC from "../pages/cliente/pedidosC";
 import CambioC from "../pages/cliente/CambioC";
 
+import ProtectedRoute from "../utils/restri.util";
+
 const AppRoutes = () => {
   return (
     <Routes>
@@ -23,7 +25,7 @@ const AppRoutes = () => {
         <Route index element={<Inicio />} />
         <Route path="fq" element={<Fq />} />
         <Route path="contacto" element={<Contacto />} />
-        
+
         {/* Rutas: layout Plataforma Cliente */}
         <Route path="/cuenta" element={<LayoutCliente />}>
           <Route index element={<PerfilC />} />
@@ -31,10 +33,16 @@ const AppRoutes = () => {
           <Route path="pedido" element={<PedidosC />} />
           <Route path="gestor" element={<CambioC />} />
         </Route>
-
       </Route>
       {/* Rutas: layout Plataforma Admin */}
-      <Route path="/adminPage" element={<LayoutAdmin />}>
+      <Route
+        path="/adminPage"
+        element={
+          <ProtectedRoute>
+            <LayoutAdmin />
+          </ProtectedRoute>
+        }
+      >
         <Route index element={<Dashboard />} />
         <Route path="GestionProducto" element={<GestionProductos />} />
         <Route path="PerfilAdmin" element={<PerfilA />} />
