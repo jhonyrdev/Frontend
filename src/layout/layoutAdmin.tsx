@@ -1,5 +1,5 @@
-import FooterA from "../components/common-admin/footerA";
-import Navbar from "../components/common-admin/navbar";
+import FooterA from "@components/common-admin/footerA";
+import Navbar from "@components/common-admin/navbar";
 import { Outlet } from "react-router-dom";
 
 const LayoutAdmin = () => {

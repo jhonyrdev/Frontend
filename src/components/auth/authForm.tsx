@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { loginUsuario, registrarUsuario } from "../../utils/credenciales/credenciales.util";
+import { loginUsuario, registrarUsuario } from "@utils/credenciales/credenciales.util";
 
 type FormType = "login" | "register";
 

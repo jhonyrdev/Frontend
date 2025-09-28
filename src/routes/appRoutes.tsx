@@ -1,21 +1,21 @@
 import { Routes, Route } from "react-router-dom";
-import LayoutPage from "../layout/layoutPage";
-import LayoutAdmin from "../layout/layoutAdmin";
-import LayoutCliente from "../layout/layoutCliente";
+import LayoutPage from "@layout/layoutPage";
+import LayoutAdmin from "@layout/layoutAdmin";
+import LayoutCliente from "@layout/layoutCliente";
 
-import Inicio from "../pages/inicio";
-import Contacto from "../pages/contacto";
-import Fq from "../pages/fq";
+import Inicio from "@pages/inicio";
+import Contacto from "@pages/contacto";
+import Fq from "@pages/fq";
 
-import Dashboard from "../pages/admin/dashboard";
-import GestionProductos from "../pages/admin/gestionProducto";
-import PerfilA from "../pages/admin/perfilA";
-import PerfilC from "../pages/cliente/perfilC";
-import DireccionC from "../pages/cliente/direccionC";
-import PedidosC from "../pages/cliente/pedidosC";
-import CambioC from "../pages/cliente/CambioC";
+import Dashboard from "@pages/admin/dashboard";
+import GestionProductos from "@pages/admin/gestionProducto";
+import PerfilA from "@pages/admin/perfilA";
+import PerfilC from "@pages/cliente/perfilC";
+import DireccionC from "@pages/cliente/direccionC";
+import PedidosC from "@pages/cliente/pedidosC";
+import CambioC from "@pages/cliente/CambioC";
 
-import ProtectedRoute from "../utils/restri.util";
+import ProtectedRoute from "@utils/restri.util";
 
 const AppRoutes = () => {
   return (

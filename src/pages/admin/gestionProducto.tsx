@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { FormModal } from "../../components/modal";
-import ProductForm from "../../components/auth/productoForm";
+import { FormModal } from "@components/modal";
+import ProductForm from "@components/auth/productoForm";
 import type { Producto } from "../../utils/types";
 import {
   getProductos,

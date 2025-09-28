@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import type { Producto, Categoria } from "../../utils/types";
-import { getCategorias } from "../../utils/Producto/categoria.utils";
+import type { Producto, Categoria } from "@utils/types";
+import { getCategorias } from "@utils/Producto/categoria.utils";
 import {
   crearProducto,
   actualizarProducto,
-} from "../../utils/Producto/producto.utils";
+} from "@utils/Producto/producto.utils";
 
 interface ProductFormProps {
   modo: "registro" | "actualizar";

@@ -1,9 +1,9 @@
-import Footer from "../components/commons/footer";
-import Header from "../components/commons/header";
+import Footer from "@components/commons/footer";
+import Header from "@components/commons/header";
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
-import { FormModal } from "../components/modal";
-import { AuthForm } from "../components/auth";
+import { FormModal } from "@components/modal";
+import { AuthForm } from "@components/auth";
 
 const LayoutPage = () => {
   const [showAuthModal, setShowAuthModal] = useState(false);

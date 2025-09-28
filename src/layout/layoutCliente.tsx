@@ -1,6 +1,6 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import ClienteSidebar from "../components/client/lateralMenu";
+import ClienteSidebar from "@components/client/lateralMenu";
 
 const LayoutCliente = () => {
   const [showMenu, setShowMenu] = useState(true);
