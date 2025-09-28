@@ -2,9 +2,10 @@ import { Link } from 'react-router-dom';
 
 interface HeaderProps {
   onAuthIconClick: () => void;
+  openSidebar: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ onAuthIconClick }) => {
+const Header: React.FC<HeaderProps> = ({ onAuthIconClick, openSidebar }) => {
   return (
     <>
       {/* Barra superior */}
@@ -46,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({ onAuthIconClick }) => {
 
             {/* Shopping bag*/}
             <span className="color-principal clickable fs-6 me-3">
-              <i className="fa-solid fa-bag-shopping"></i>
+              <i className="fa-solid fa-bag-shopping" onClick={openSidebar}></i>
             </span>
 
             {/* Botón hamburguesa */}
