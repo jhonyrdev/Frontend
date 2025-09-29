@@ -12,7 +12,9 @@ const LayoutPage = () => {
   return (
     <div className="layout-admin d-flex flex-column min-vh-100">
       <Header onAuthIconClick={() => setShowAuthModal(true)} openSidebar={() => setSidebarOpen(true)} />
+      
       <Carrito_Compra isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)}/>
+      
       <FormModal show={showAuthModal} onClose={() => setShowAuthModal(false)}>
         <AuthForm onClose={() => setShowAuthModal(false)} />
       </FormModal>
