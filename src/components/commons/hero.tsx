@@ -1,34 +1,23 @@
+import { Carousel } from 'react-bootstrap';
+
 const Hero = () => {
   return (
-    <div
-      id="carouselExampleAutoplaying"
-      className="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div className="carousel-inner">
-        <div className="carousel-item active">
-          <img
-            src="https://tofuu.getjusto.com/orioneat-local/resized2/hLa4djHbMd5KwDwEo-x-300.webp"
-            className="d-block w-100"
-            alt="Slide 1"
-          />
-        </div>
-        <div className="carousel-item">
-          <img
-            src="../../../public/img/banner2.webp"
-            className="d-block w-100"
-            alt="Slide 2"
-          />
-        </div>
-        <div className="carousel-item">
-          <img
-            src="https://tofuu.getjusto.com/orioneat-local/resized2/DZb8xaErPKPPpGWdL-x-300.webp"
-            className="d-block w-100"
-            alt="Slide 3"
-          />
-        </div>
-      </div>
-    </div>
+    <Carousel controls={false} indicators={false}>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="/img/banner1.webp"
+          alt="Slide 1"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="/img/banner2.webp"
+          alt="Slide 1"
+        />
+      </Carousel.Item>
+    </Carousel>
   );
 };
 
