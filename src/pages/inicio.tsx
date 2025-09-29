@@ -70,7 +70,7 @@ const Inicio = () => {
       <CategoriaCarousel />
 
       <div className="container py-4">
-        <h5 className="text-center text-danger mb-3">PRODUCTOS DESTACADOS</h5>
+        <h5 className="text-center color-principal mb-3">PRODUCTOS DESTACADOS</h5>
         <div className="row">
           <div className="productos-scroll-outer">
             {" "}

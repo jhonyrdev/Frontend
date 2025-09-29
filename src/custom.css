@@ -1,13 +1,18 @@
 .fondo-color-principal {
-  background-color: #a51884;
+  background-color: #7a1663ff;
 }
+
+.fondo-color-principal-parcial {
+  background-color: #fcedf9ff ;
+}
+
 
 .color-principal {
   color: #a51884;
 }
 
 .fondo-color-banner {
-  background-color: #fdeb48;
+  background-color: #f5eb98ff;
 }
 
 .footer-inferior {

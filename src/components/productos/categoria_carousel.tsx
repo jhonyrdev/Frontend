@@ -36,7 +36,7 @@ const categories = [
 const CategoriaCarousel = () => {
   return (
     <div className="container my-4">
-      <h5 className="text-center text-danger mb-3">NUESTRAS CATEGORIAS</h5>
+      <h5 className="text-center color-principal mb-3">NUESTRAS CATEGORIAS</h5>
 
       {/* Carrusel para tablets y móviles */}
       <div className="category-scroll-outer">

@@ -15,7 +15,7 @@ const Hero = () => {
         </div>
         <div className="carousel-item">
           <img
-            src="https://tofuu.getjusto.com/orioneat-local/resized2/DRmakTqJADeRLAjxK-x-300.webp"
+            src="../../../public/img/banner2.webp"
             className="d-block w-100"
             alt="Slide 2"
           />
